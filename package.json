@@ -1,0 +1,49 @@
+{
+  "name": "idyllic-repo",
+  "version": "0.0.1",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "nyc mocha",
+    "cm": "git-cz",
+    "release": "standard-version",
+    "check-coverage": "istanbul check-coverage --statements 100 --branches 100 --functions 100 --lines 100",
+    "precommit": "npm t && npm run check-coverage",
+    "dont-break": "dont-break"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "nyc": {
+    "include": [
+      "src/**/*"
+    ],
+    "exclude": [
+      "node_modules/",
+      "dist/",
+      "src/**/*.spec.js"
+    ],
+    "reporter": [
+      "text-summary",
+      "lcov",
+      "json"
+    ]
+  },
+  "keywords": [],
+  "author": "Frank Bruzzese <bruzzese.frank@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.1.0",
+    "commitizen": "^2.9.6",
+    "cz-conventional-changelog": "^2.0.0",
+    "dont-break": "^1.5.0",
+    "husky": "^0.14.3",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.4.2",
+    "nyc": "^11.0.3",
+    "standard-version": "^4.2.0",
+    "webpack": "^3.3.0"
+  }
+}
