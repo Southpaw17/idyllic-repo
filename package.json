@@ -9,6 +9,7 @@
     "release": "standard-version",
     "check-coverage": "istanbul check-coverage --statements 100 --branches 100 --functions 100 --lines 100",
     "precommit": "npm t && npm run check-coverage",
+    "commitmsg": "validate-commit-msg",
     "dont-break": "dont-break"
   },
   "config": {
@@ -34,6 +35,14 @@
   "keywords": [],
   "author": "Frank Bruzzese <bruzzese.frank@gmail.com>",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Southpaw17/idyllic-repo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Southpaw17/idyllic-repo/issues"
+  },
+  "homepage": "https://github.com/Southpaw17/idyllic-repo#readme",
   "devDependencies": {
     "chai": "^4.1.0",
     "commitizen": "^2.9.6",
@@ -44,6 +53,7 @@
     "mocha": "^3.4.2",
     "nyc": "^11.0.3",
     "standard-version": "^4.2.0",
+    "validate-commit-msg": "^2.12.2",
     "webpack": "^3.3.0"
   }
 }
